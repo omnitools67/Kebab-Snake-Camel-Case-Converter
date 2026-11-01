@@ -11,14 +11,14 @@ Try the live working tool online:
 ---
 
 ## ✨ Features
-* **Real-time Conversion:** Formats text instantly as you type[cite: 2].
+* **Real-time Conversion:** Formats text instantly as you type.
 * **Three Popular Cases:**
-  * **Kebab-case:** Ideal for SEO-friendly URL slugs (e.g., `my-new-post`)[cite: 2].
-  * **Snake_case:** Perfect for Python variables and database column naming (e.g., `my_new_post`)[cite: 2].
-  * **CamelCase:** Tailored for JavaScript, Java, and class properties (e.g., `myNewPost`)[cite: 2].
+  * **Kebab-case:** Ideal for SEO-friendly URL slugs (e.g., `my-new-post`)
+  * **Snake_case:** Perfect for Python variables and database column naming (e.g., `my_new_post`).
+  * **CamelCase:** Tailored for JavaScript, Java, and class properties (e.g., `myNewPost`).
 * **100% Client-side & Privacy-Focused:** All logic runs locally in the browser. Zero data transmission to any external server[cite: 2].
-* **One-Click Copy:** Fast clipboard copying with instant visual feedback[cite: 2].
-* **Zero Dependencies:** Pure HTML5, CSS3, and Vanilla JavaScript—no frameworks required[cite: 2].
+* **One-Click Copy:** Fast clipboard copying with instant visual feedback.
+* **Zero Dependencies:** Pure HTML5, CSS3, and Vanilla JavaScript—no frameworks required.
 
 ---
 
