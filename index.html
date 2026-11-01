@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+<title>Text Converter: Kebab, Snake & Camel Case | Omni Tools</title>
+<meta name="title" content="Case Converter Studio | Convert Text to Kebab, Snake & Camel Case | Omni Tools">
+<meta name="description" content="Instantly convert text to CamelCase, snake_case, kebab-case, Title Case, UPPERCASE, and lowercase online for free. Clean string formatting tool by Omni Tools.">
+<meta name="keywords" content="case converter, kebab case converter, snake case, camel case, title case, uppercase to lowercase, text case converter, string formatter, developer tools, Omni Tools">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.omnitools.pk/kebab-case/">
+<meta property="og:title" content="Case Converter Studio | Convert Text to Kebab, Snake & Camel Case | Omni Tools">
+<meta property="og:description" content="Instantly convert text to CamelCase, snake_case, kebab-case, Title Case, UPPERCASE, and lowercase online for free. Clean string formatting tool by Omni Tools.">
+<meta property="og:image" content="https://www.omnitools.pk/assets/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.omnitools.pk/kebab-case/">
+<meta property="twitter:title" content="Case Converter Studio | Convert Text to Kebab, Snake & Camel Case | Omni Tools">
+<meta property="twitter:description" content="Instantly convert text to CamelCase, snake_case, kebab-case, Title Case, UPPERCASE, and lowercase online for free. Clean string formatting tool by Omni Tools.">
+<meta property="twitter:image" content="https://www.omnitools.pk/assets/og-image.jpg">
+    <style>
+        :root { --primary: #4f46e5; --bg: #f1f5f9; --text: #1e293b; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; }
+        .wrapper { width: 100%; max-width: 850px; }
+        
+        .card { background: #ffecdc; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box; margin-bottom: 30px; }
+        .header { text-align: center; margin-bottom: 25px; }
+        h2 { color: #444; margin-bottom: 5px; font-weight: 800; opacity: 0.8;}
+        .desc { color: #64748b; font-size: 0.95rem; line-height: 1.5; }
+        
+        textarea { width: 100%; height: 120px; padding: 15px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; box-sizing: border-box; resize: none; outline: none; transition: 0.3s; margin-top: 10px; font-family: inherit; background: #e8d9cb;}
+        textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
+        
+        .results-grid { margin-top: 25px; display: grid; gap: 15px; }
+        .res-item { background: #e8d9cb; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+        .res-item:hover { border-color: var(--primary); background: #fff; }
+        
+        .label-box { display: flex; flex-direction: column; flex-grow: 1; }
+        .label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; }
+        .val { font-family: 'Courier New', monospace; color: var(--primary); font-weight: 700; word-break: break-all; margin-top: 5px; font-size: 1.1rem; }
+        
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-main { flex: 1; padding: 12px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; transition: 0.2s; text-align: center; }
+        .copy-btn { background: var(--primary); color: white; padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; font-size: 0.85rem; }
+        .clear-btn { background: #f6a200; color: #444; width: 100%; margin-top: 15px; }
+        .clear-btn:hover { background: #e2e8f0; }
+
+        /* بکس کے اندر ڈس کلیمر */
+        .disclaimer-box { font-size: 11px; color: #555; margin-top: 25px; padding-top: 15px; border-top: 1px solid #f1f5f9; line-height: 1.6; }
+
+        /* ایس ای او آرٹیکل */
+        .seo-content { background: #ffddc1; padding: 40px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); color: #475569; line-height: 1.8; text-align: left; }
+        .seo-content h2 { color: var(--text); border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 20px; }
+        .seo-content h3 { color: var(--primary); margin-top: 25px; }
+		
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="header">
+		
+            <h2>Case Converter Studio 🖋️</h2>
+            <p class="desc">Instantly convert text to <b>Kebab-case</b>, <b>Snake_case</b>, and <b>CamelCase</b>. Perfect for SEO experts and developers.</p>
+        </div>
+
+        <textarea id="input" placeholder="Start typing or paste your content here..." oninput="convert()"></textarea>
+        
+        <button class="btn-main clear-btn" onclick="clearAll()">Clear Everything</button>
+
+        <div class="results-grid">
+            <div class="res-item">
+                <div class="label-box">
+                    <span class="label">Kebab Case (URL Friendly)</span>
+                    <span id="kebab" class="val">-</span>
+                </div>
+                <button class="copy-btn" onclick="cp('kebab', event)">Copy</button>
+            </div>
+            <div class="res-item">
+                <div class="label-box">
+                    <span class="label">Snake Case (Database/Python)</span>
+                    <span id="snake" class="val">-</span>
+                </div>
+                <button class="copy-btn" onclick="cp('snake', event)">Copy</button>
+            </div>
+            <div class="res-item">
+                <div class="label-box">
+                    <span class="label">Camel Case (JavaScript/Java)</span>
+                    <span id="camel" class="val">-</span>
+                </div>
+                <button class="copy-btn" onclick="cp('camel', event)">Copy</button>
+            </div>
+        </div>
+
+        <div class="disclaimer-box">
+            <strong>Note:</strong> Case Converter Studio processes all text locally in your browser. No data is sent to any server, making it 100% secure for sensitive code and private text strings.
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>What is Case Conversion and Why is it Important?</h2>
+        <p>Text case conversion is a critical task for both <strong>SEO specialists</strong> and <strong>software developers</strong>. In the world of search engine optimization, the way you format your URLs (Slugs) can impact your ranking. Similarly, in programming, adhering to specific naming conventions is essential for code readability and maintenance.</p>
+        
+        
+        <h3>Kebab-Case for SEO Slugs</h3>
+        <p><strong>Kebab-case</strong> (e.g., <code>my-new-post</code>) is the gold standard for URLs. Google and other search engines treat hyphens as word separators, making it easier for them to understand the context of your page. Our tool automatically strips special characters and converts spaces to dashes to create perfect SEO-friendly slugs.</p>
+        
+        
+
+        <h3>Snake_Case and CamelCase for Developers</h3>
+        <p>For programmers, consistency is key. <strong>Snake_case</strong> is widely used in Python and database schema naming, while <strong>CamelCase</strong> is the standard for JavaScript variables and Java class names. Instead of manually editing strings, our <strong>Case Converter Studio</strong> automates the process, saving you time and preventing syntax errors.</p>
+        
+        <h3>Key Benefits of Using Our Studio:</h3>
+        <ul>
+            <li><strong>Real-time Conversion:</strong> Results appear as you type.</li>
+            <li><strong>One-Click Copy:</strong> Fast clipboard integration for productivity.</li>
+            <li><strong>Privacy Focused:</strong> No server-side processing ensures your data stays on your device.</li>
+            <li><strong>Clean Logic:</strong> Handles special characters and multiple spaces gracefully.</li>
+        </ul>
+    </article>
+</div>
+
+<script>
+    function convert() {
+        const str = document.getElementById('input').value;
+        if(!str.trim()) {
+            document.getElementById('kebab').innerText = "-";
+            document.getElementById('snake').innerText = "-";
+            document.getElementById('camel').innerText = "-";
+            return;
+        }
+
+        // Kebab-case
+        document.getElementById('kebab').innerText = str.toLowerCase().trim()
+            .replace(/[^\w\s-]/g, '')
+            .replace(/[\s_-]+/g, '-');
+
+        // Snake_case
+        document.getElementById('snake').innerText = str.toLowerCase().trim()
+            .replace(/[^\w\s-]/g, '')
+            .replace(/[\s-]+/g, '_');
+
+        // CamelCase
+        document.getElementById('camel').innerText = str.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
+            return index === 0 ? word.toLowerCase() : word.toUpperCase();
+        }).replace(/\s+/g, '').replace(/[^\w]/g, '');
+    }
+
+    function cp(id, event) {
+        const t = document.getElementById(id).innerText;
+        if(t === "-") return;
+        navigator.clipboard.writeText(t);
+        
+        const btn = event.target;
+        const originalText = btn.innerText;
+        btn.innerText = "Copied!";
+        btn.style.background = "#059669";
+        
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.background = "#4f46e5";
+        }, 1500);
+    }
+
+    function clearAll() {
+        document.getElementById('input').value = "";
+        convert();
+        document.getElementById('input').focus();
+    }
+</script>
+
+</body>
+</html>
