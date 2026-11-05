@@ -41,3 +41,7 @@ const snake = str.toLowerCase().trim()
 const camel = str.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
     return index === 0 ? word.toLowerCase() : word.toUpperCase();
 }).replace(/\s+/g, '').replace(/[^\w]/g, '');
+**
+Discover All 85+ Tools:
+👉 **[https://www.omnitools.pk](https://www.omnitools.pk)**
+![Profile Views](https://komarev.com/ghpvc/?username=omnitools67&color=blue)
