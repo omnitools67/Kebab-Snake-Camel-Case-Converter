@@ -19,7 +19,11 @@ Try the live working tool online:
 * **100% Client-side & Privacy-Focused:** All logic runs locally in the browser. Zero data transmission to any external server[cite: 2].
 * **One-Click Copy:** Fast clipboard copying with instant visual feedback.
 * **Zero Dependencies:** Pure HTML5, CSS3, and Vanilla JavaScript—no frameworks required.
-
+* 
+## 🚀 Explore All 85+ Tools
+Discover our entire suite of developer helpers, text manipulators, and calculators at:
+👉 **[https://www.omnitools.pk](https://www.omnitools.pk)**
+![Profile Views](https://komarev.com/ghpvc/?username=omnitools67&color=blue)
 ---
 
 ## 💻 Code Snippet (Core Logic)
@@ -42,6 +46,3 @@ const camel = str.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
     return index === 0 ? word.toLowerCase() : word.toUpperCase();
 }).replace(/\s+/g, '').replace(/[^\w]/g, '');
 **
-Discover All 85+ Tools:
-👉 **[https://www.omnitools.pk](https://www.omnitools.pk)**
-![Profile Views](https://komarev.com/ghpvc/?username=omnitools67&color=blue)
